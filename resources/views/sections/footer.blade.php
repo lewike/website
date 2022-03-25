@@ -18,7 +18,7 @@
       <div class="contact-box hidden">
         <div class="shadow bg-white py-3 px-5 rounded-sm">
           <div class="bg-blue-600 text-white py-1 rounded-sm">联系我们</div>
-          <p class="text-2xl text-blue-600 font-semibold py-3">199 3376 1505</p>
+          <p class="text-2xl text-blue-600 font-semibold py-3">199 3766 1505</p>
           <div class="text-left text-sm text-gray-600">
             <p class="mt-1">在线咨询：<a href="http://wpa.qq.com/msgrd?v=3&uin=77561113&site=qq&menu=yes" class="inline-block text-white bg-blue-500 px-3 py-1 rounded-sm">QQ交谈</a></p>
             <p class="mt-3">邮件：bd@lewike.com</p>
