@@ -2,6 +2,7 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 @import 'wow.js/css/libs/animate';
+@import './content.css';
 
 @font-face {
   src: url('../fonts/Lato-Regular.ttf');
@@ -550,26 +551,6 @@ header {
     time {
       @apply text-gray-500 text-xs;
     }
-  }
-}
-
-.entry-content,
-.page-content {
-  @apply leading-7;
-
-  h1,
-  h2,
-  h3,
-  h4 {
-    @apply font-medium py-2 mt-2;
-  }
-
-  h1 {
-    @apply text-2xl;
-  }
-
-  h2 {
-    @apply text-xl;
   }
 }
 
