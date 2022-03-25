@@ -29,10 +29,8 @@ header {
   }
 
   &.is-sticky {
-    top: 0;
-    position: fixed;
-    background-color: #fff;
     transition: background-color 0.3s linear;
+    @apply drop-shadow bg-white top-0 fixed;
 
     .sticky-bar {
       padding-bottom: 0;
@@ -48,9 +46,7 @@ header {
   }
 
   .nav {
-    display: flex;
-    justify-content: space-between;
-    column-gap: 2em;
+    @apply flex justify-between gap-8;
 
     a {
       font-size: 1.1em;
