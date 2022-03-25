@@ -27,14 +27,14 @@
       </div>  
     </div>
     <div class="entry-content mt-2 px-6">
-      @php(the_content()) @endphp
+      @php the_content() @endphp
     </div>
     <div class="px-6">
       <div class="bg-gray-50 border border-gray-100 rounded-sm px-6 py-4 my-8 text-sm">
         如若转载，请注明出处：{{get_the_permalink()}}
       </div>
     </div>
-    @php ($tags = get_the_tags(get_the_ID())) @endphp
+    @php $tags = get_the_tags(get_the_ID()) @endphp
     @if (is_array($tags))
       <div class="post-tags mb-4 px-6">
         <ul class="flex flex-wrap gap-3">
