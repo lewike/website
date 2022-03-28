@@ -18,9 +18,9 @@
       <ul class="flex-auto post-list px-6 bg-white shadow rounded-sm my-4">
       @while(have_posts()) @php(the_post())
         <li class="flex gap-6 hover:bg-gray-100 py-6 border-b border-gray-100 hover:-mx-6 hover:px-6 transition-margin duration-500 ease-in-out">
-          <div class="w-1/3">
+          <div class="w-1/3 flex-none">
             <a href="{{the_permalink()}}">
-            <div class="post-thumbnail rounded">
+            <div class="post-thumbnail rounded shadow-md shadow-slate-300 hover:shadow-slate-400">
               @if (has_post_thumbnail())
               <img src="@php(the_post_thumbnail_url())" alt="@php(the_title())" class="transition-transform duration-500 ease-in-out">
               @endif
