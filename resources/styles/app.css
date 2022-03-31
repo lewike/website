@@ -555,6 +555,8 @@ header {
 }
 
 .left-nav {
+  list-style: none !important;
+  margin: 0 !important;
   @apply text-center;
 
   li:first-child {
@@ -570,7 +572,7 @@ header {
   }
 
   a {
-    @apply text-gray-700 text-base px-5 py-2 tracking-wider bg-gray-100;
+    @apply text-gray-700 text-base px-5 py-2 tracking-wider bg-gray-100 border-b-0;
 
     &:hover {
       @apply border-b-2 border-blue-500 text-blue-500 bg-blue-50;
