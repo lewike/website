@@ -1,7 +1,6 @@
 @import 'highlight.js/styles/github-dark-dimmed.css';
 
-.entry-content,
-.page-content {
+.entry-content {
   a {
     border-bottom: 1px solid #1abc9c;
   }
