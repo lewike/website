@@ -175,6 +175,10 @@
     font-weight: inherit;
   }
 
+  p + img {
+    margin-top: 1em;
+  }
+
   img {
     max-width: 100%;
   }
