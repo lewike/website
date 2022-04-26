@@ -44,10 +44,10 @@ const main = async (err) => {
       }
       
       let url = buttonEle.dataset.url;
-      let formData = new FormData;
+      let formData = new FormData();
       formData.append('action', 'like_post');
       formData.append('post_id', postId);
-      axios.post(url, formData)
+      axios.post(url, formData, {headers: {'Content-Type': 'multipart/form-data'}})
         .then(response => {
           if (response.status) {
             const postLikesEle = document.querySelector('#post-likes-number');

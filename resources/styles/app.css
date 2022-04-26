@@ -644,3 +644,9 @@ header {
     @apply absolute w-full h-full bg-black opacity-50 z-10;
   }
 }
+
+.post-author {
+  img {
+    @apply rounded-full;
+  }
+}

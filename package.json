@@ -32,7 +32,6 @@
     "axios": "0.26.1",
     "highlight.js": "^11.5.0",
     "stickynav-js": "^1.1.0",
-    "url": "^0.11.0",
     "vanilla-back-to-top": "^7.2.1",
     "wow.js": "^1.2.2"
   }
