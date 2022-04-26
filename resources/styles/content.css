@@ -175,7 +175,7 @@
     font-weight: inherit;
   }
 
-  p + img {
+  p + figure {
     margin-top: 1em;
   }
 

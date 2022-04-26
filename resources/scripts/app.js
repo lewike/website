@@ -34,12 +34,15 @@ const main = async (err) => {
       let buttonEle = event.target;
       let posts = JSON.parse(localStorage.getItem('liked_posts'));
       let postId = parseInt(buttonEle.dataset.postid);
-      if (Array.isArray(posts) && posts.indexOf(postId) !== -1) {
-        buttonEle.classList.add('liked');
+       if (Array.isArray(posts) && posts.indexOf(postId) !== -1) {
+        btnLike.classList.add('liked');
         return false;
-      } else {
+      }
+      
+      if (!Array.isArray(posts)) {
         posts = [];
       }
+      
       let url = buttonEle.dataset.url;
       let formData = new FormData;
       formData.append('action', 'like_post');

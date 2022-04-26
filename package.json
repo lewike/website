@@ -29,7 +29,7 @@
     "@roots/eslint-config": "5.7.7",
     "@roots/sage": "5.7.7",
     "@tailwindcss/forms": "^0.5.0",
-    "axios": "^0.27.0",
+    "axios": "0.26.1",
     "highlight.js": "^11.5.0",
     "stickynav-js": "^1.1.0",
     "url": "^0.11.0",

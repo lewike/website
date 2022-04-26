@@ -151,6 +151,13 @@ add_action('wp_ajax_like_post', function(){
     wp_die($postLikes);
 });
 
+add_action('wp_ajax_nopriv_like_post', function(){
+    $postId = (int)$_POST['post_id'];
+    $postLikes = (int)get_post_meta($postId, 'post_likes', true);
+    update_post_meta($postId, 'post_likes', ++$postLikes);
+    wp_die($postLikes);
+});
+
 add_action("admin_menu", function(){
     add_menu_page("主题配置", "主题配置", "manage_options", "theme-panel", function(){
 	    echo '<div class="wrap"><h1>主题配置</h1><form method="post" action="options.php" enctype="multipart/form-data">';
