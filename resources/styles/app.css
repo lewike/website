@@ -360,10 +360,10 @@ header {
   }
 
   .comment-form {
-    @apply grid grid-cols-3 items-end mx-4 gap-y-1;
+    @apply grid grid-cols-1 mx-0 gap-y-3  md:grid-cols-3 items-end md:mx-4 md:gap-y-1;
 
     .comment-form-comment {
-      @apply col-span-3;
+      @apply md:col-span-3;
     }
 
     textarea {
@@ -600,7 +600,7 @@ header {
   width: 36px;
   left: 50%;
   bottom: 100px;
-  @apply bg-blue-500 flex flex-col items-center py-3 rounded-sm gap-4;
+  @apply bg-blue-500 flex-col items-center py-3 rounded-sm gap-4;
 
   @media (min-width: 1280px) {
     margin-left: 660px;
