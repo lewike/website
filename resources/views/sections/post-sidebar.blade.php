@@ -47,7 +47,7 @@
     <ul class="my-1 ml-1">
         @foreach ($authorPosts as $post)
         <li>
-            <div class="post-thumbnail-box">
+            <div class="post-thumbnail-box flex-none">
                 <img src="{{get_the_post_thumbnail_url($post)}}" alt="{{$post->post_title}}">
             </div>
             <div class="flex flex-col justify-between">
