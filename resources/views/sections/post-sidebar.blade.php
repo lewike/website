@@ -1,4 +1,4 @@
-<div class="my-4 shadow rounded-sm bg-white p-6">
+<div class="mx-2 md:mx-0 my-4 shadow rounded-sm bg-white p-6">
     <div class="author-bg mr-0"></div>
     <div class="-mt-8 text-center">
         <div class="img-box mx-auto bg-white rounded-full p-0.5 shadow">
@@ -36,7 +36,7 @@
         </ul>
     </div>
 </div>
-<div class="my-4 shadow rounded-sm bg-white px-6 py-3 latest-posts">
+<div class="mx-2 md:mx-0 my-4 shadow rounded-sm bg-white px-6 py-3 latest-posts">
     <h2>最新文章</h2>
     @php 
         $authorPosts = get_posts([

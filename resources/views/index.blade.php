@@ -1,24 +1,11 @@
-<header id="header" class="z-10 drop-shadow-sm bg-white">
-  <div class="flex container mx-auto justify-between sticky-bar items-center">
-    <a class="brand" href="{{ home_url('/') }}">
-      <img src="@asset('/images/weblogo.png')" alt="" class="logo">
-    </a>
-
-  @if (has_nav_menu('primary_navigation'))
-    <nav class="nav-primary py-5" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
-      {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav items-center', 'echo' => false]) !!}
-    </nav>
-  @endif
-  </div>
-</header>
-
+@include('sections.page-header')
 <main id="main" class="main bg-slate-50"> 
-  <div class="container flex mx-auto gap-6">
-    <div>
+  <div class="container block pb-4 md:pb-0 md:flex mx-auto gap-6">
+    <div class="px-2 md:px-0">
       <ul class="flex-auto post-list px-6 bg-white shadow rounded-sm my-4">
       @while(have_posts()) @php(the_post())
-        <li class="flex gap-6 hover:bg-gray-100 py-6 border-b border-gray-100 hover:-mx-6 hover:px-6 transition-margin duration-500 ease-in-out">
-          <div class="w-1/3 flex-none">
+        <li class="block md:flex gap-6 hover:bg-gray-100 py-6 border-b border-gray-100 hover:-mx-6 hover:px-6 transition-margin duration-500 ease-in-out">
+          <div class="w-full mb-4 md:mb-0 md:w-1/3 flex-none">
             <a href="{{the_permalink()}}">
             <div class="post-thumbnail rounded shadow-md shadow-slate-300 hover:shadow-slate-400">
               @if (has_post_thumbnail())
@@ -72,7 +59,7 @@
         @php(the_posts_pagination())
       </div>
     </div>
-    <div class="sidebar my-4 shadow rounded-sm bg-white p-6">
+    <div class="sidebar mx-2 md:mx-0 my-4 shadow rounded-sm bg-white p-6">
       @include('sections.sidebar')
     </div>
   </div>

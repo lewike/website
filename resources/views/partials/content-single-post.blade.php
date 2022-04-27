@@ -1,14 +1,14 @@
 <article @php post_class() @endphp>
-  <div class="shadow bg-white py-6 my-4 rounded-sm">
+  <div class="mx-2 md:mx-0 shadow bg-white py-6 my-4 rounded-sm">
     <div class="px-6">
       <h1 class="entry-title text-2xl mb-4">
         {!! $title !!} 
       </h1>
-      <div class="entry-meta flex gap-2 text-sm text-gray-500 my-3">
-        <a href="{{ get_author_posts_url(get_the_author_meta('ID')) }}" rel="author" class="fn">
+      <div class="entry-meta flex flex-wrap gap-1 md:flex-nowrap md:gap-2 text-sm text-gray-500 my-3">
+        <a href="{{ get_author_posts_url(get_the_author_meta('ID')) }}" rel="author" class="fn hidden md:block">
           {{ get_the_author() }}
         </a>
-        <span>&bull;</span>
+        <span class="hidden md:block">&bull;</span>
         <time class="updated" datetime="{{ get_post_time('c', true) }}">
           {{ get_the_date() }}
         </time>
@@ -68,17 +68,17 @@
       
     </div>
   </div>
-  <div class="grid grid-cols-2 gap-2">
+  <div class="mx-2 md:mx-0 grid grid-cols-1 md:grid-cols-2 gap-2">
     <div>
       @php
       $prePost = get_previous_post();
       @endphp
       @if ($prePost)
       <div class="rela-post-box" style="background-image: url({{get_the_post_thumbnail_url($prePost)}})">
-        <div class="absolute z-50 w-full h-full p-2">
+        <div class="absolute z-30 w-full h-full p-2">
           <a href="{{get_the_permalink($prePost)}}">{{$prePost->post_title}}</a>
         </div>
-        <div class="absolute z-50 bottom-1 w-full flex justify-between px-2 py-1 text-sm">
+        <div class="absolute z-30 bottom-1 w-full flex justify-between px-2 py-1 text-sm">
           <div>
             << 上一篇
           </div>
@@ -112,6 +112,5 @@
       </div>
     </div>
   </div>
-
   @php(comments_template())
 </article>

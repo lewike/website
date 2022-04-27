@@ -38,6 +38,10 @@ header {
       transition: padding-bottom, padding-top 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
+    .mobile-nav {
+      @apply top-[62px];
+    }
+
     .logo {
       width: 216px;
       height: 63px;
@@ -84,6 +88,14 @@ header {
           width: 100%;
         }
       }
+    }
+  }
+
+  .mobile-nav {
+    @apply absolute top-[94px] bg-white z-50 w-full h-[90vh];
+
+    .nav {
+      @apply flex-col;
     }
   }
 }
@@ -147,7 +159,11 @@ header {
 }
 
 .footer-content {
-  @apply leading-7;
+  @apply leading-7 px-8 md:px-0;
+
+  .wp-block-columns {
+    @apply gap-6;
+  }
 
   h4 {
     color: #1e293b;
@@ -649,4 +665,22 @@ header {
   img {
     @apply rounded-full;
   }
+}
+
+.mobile-table {
+  @apply block md:hidden;
+
+  td {
+    @apply first:min-w-[5em] last:!text-center;
+  }
+
+  tr:nth-child(2) {
+    td {
+      @apply !text-left;
+    }
+  }
+}
+
+.pc-table {
+  @apply hidden md:block;
 }

@@ -1,5 +1,5 @@
 @if (! post_password_required())
-  <section id="comments" class="comments shadow bg-white px-6 py-2 mb-4">
+  <section id="comments" class="mx-2 md:mx-0 comments shadow bg-white px-6 py-2 mb-4">
     @php(comment_form())
     @if (have_comments())
       <h3>

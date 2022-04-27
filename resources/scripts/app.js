@@ -60,6 +60,23 @@ const main = async (err) => {
     })
   }
   
+  const mobileMenu = document.querySelector('.mobile-menu')
+  if (mobileMenu) {
+    mobileMenu.addEventListener('click', () => {
+      const nav = document.querySelector('.nav-primary')
+      if (nav) {
+        nav.classList.toggle('hidden')
+        nav.classList.add('mobile-nav')
+      }
+    })
+    let nav = document.querySelector('.nav-primary')
+    if (nav) {
+      nav.addEventListener('click', () => {
+        nav.classList.add('hidden')
+      })
+    }
+  }
+
   goTop();
 };
 
