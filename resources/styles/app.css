@@ -684,3 +684,19 @@ header {
 .pc-table {
   @apply hidden md:block;
 }
+
+.sub-menu {
+  @apply hidden relative;
+}
+
+.menu-item-has-children:hover .sub-menu {
+  @apply block;
+}
+
+.menu-item-has-children {
+  @apply relative overflow-hidden;
+}
+
+.post-categories {
+  @apply flex gap-1;
+}

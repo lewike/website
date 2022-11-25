@@ -34,5 +34,6 @@
     "stickynav-js": "^1.1.0",
     "vanilla-back-to-top": "^7.2.1",
     "wow.js": "^1.2.2"
-  }
+  },
+  "dependencies": {}
 }

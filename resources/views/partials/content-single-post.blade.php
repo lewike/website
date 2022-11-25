@@ -4,7 +4,7 @@
       <h1 class="entry-title text-2xl mb-4">
         {!! $title !!} 
       </h1>
-      <div class="entry-meta flex flex-wrap gap-1 md:flex-nowrap md:gap-2 text-sm text-gray-500 my-3">
+      <div class="entry-meta flex flex-wrap gap-1 md:flex-nowrap md:gap-2 text-sm text-gray-500 my-3 border-b border-gray-100 pb-2">
         <a href="{{ get_author_posts_url(get_the_author_meta('ID')) }}" rel="author" class="fn hidden md:block">
           {{ get_the_author() }}
         </a>
@@ -13,7 +13,7 @@
           {{ get_the_date() }}
         </time>
         <span>&bull;</span>
-        <div>
+        <div class="title-cateogry">
           @php the_category() @endphp
         </div>
         <span>&bull;</span>
@@ -26,7 +26,7 @@
         </div>
       </div>  
     </div>
-    <div class="entry-content mt-2 px-6">
+    <div class="entry-content mt-3 px-6 leading-6">
       @php the_content() @endphp
     </div>
     <div class="px-6">
