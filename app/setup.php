@@ -144,6 +144,15 @@ add_action('wp_head', function() {
     }
 });
 
+add_action('rest_api_init', function () {
+    register_meta('post', 'post_views', [
+        'type' => 'number',
+        'description' => 'post views',
+        'single' => true,
+        'show_in_rest' => true
+    ]);
+});
+
 add_action('wp_ajax_like_post', function(){
     $postId = (int)$_POST['post_id'];
     $postLikes = (int)get_post_meta($postId, 'post_likes', true);
