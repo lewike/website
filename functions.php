@@ -64,9 +64,6 @@ collect(['setup', 'filters'])
         }
     });
 
-
-add_theme_support('sage');
-
 function custom_comment($comment, $args, $depth)
 {
     $tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
