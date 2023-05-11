@@ -1,45 +1,66 @@
 /**
- * @typedef {import('@roots/bud').Bud} bud
+ * Compiler configuration
  *
- * @param {bud} app
+ * @see {@link https://roots.io/docs/sage sage documentation}
+ * @see {@link https://bud.js.org/guides/configure bud.js configuration guide}
+ *
+ * @param {import('@roots/bud').Bud} app
  */
-module.exports = async (app) => {
+export default async (app) => {
+  /**
+   * Application assets & entrypoints
+   *
+   * @see {@link https://bud.js.org/docs/bud.entry}
+   * @see {@link https://bud.js.org/docs/bud.assets}
+   */
   app
-    /**
-     * Application entrypoints
-     *
-     * Paths are relative to your resources directory
-     */
-    .entry({
-      app: ['@scripts/app', '@styles/app'],
-      editor: ['@scripts/editor', '@styles/editor'],
-    })
+    .entry('app', ['@scripts/app', '@styles/app'])
+    .entry('editor', ['@scripts/editor', '@styles/editor'])
+    .assets(['images']);
 
-    /**
-     * These files should be processed as part of the build
-     * even if they are not explicitly imported in application assets.
-     */
-    .assets('images')
+  /**
+   * Set public path
+   *
+   * @see {@link https://bud.js.org/docs/bud.setPublicPath}
+   */
+  app.setPublicPath('/app/themes/sage/public/');
 
-    /**
-     * These files will trigger a full page reload
-     * when modified.
-     */
-    .watch([
-      'tailwind.config.js',
-      'resources/views/**/*.blade.php',
-      'app/View/**/*.php',
-    ])
+  /**
+   * Development server settings
+   *
+   * @see {@link https://bud.js.org/docs/bud.setUrl}
+   * @see {@link https://bud.js.org/docs/bud.setProxyUrl}
+   * @see {@link https://bud.js.org/docs/bud.watch}
+   */
+  app
+    .setUrl('http://localhost:3000')
+    .setProxyUrl('http://example.test')
+    .watch(['resources/views', 'app']);
 
-    /**
-     * Target URL to be proxied by the dev server.
-     *
-     * This is your local dev server.
-     */
-    .proxy('http://wp.test')
-
-    /**
-     * Development URL
-     */
-    .serve('http://wp.test:3005');
+  /**
+   * Generate WordPress `theme.json`
+   *
+   * @note This overwrites `theme.json` on every build.
+   *
+   * @see {@link https://bud.js.org/extensions/sage/theme.json}
+   * @see {@link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json}
+   */
+  app.wpjson
+    .set('settings.color.custom', false)
+    .set('settings.color.customDuotone', false)
+    .set('settings.color.customGradient', false)
+    .set('settings.color.defaultDuotone', false)
+    .set('settings.color.defaultGradients', false)
+    .set('settings.color.defaultPalette', false)
+    .set('settings.color.duotone', [])
+    .set('settings.custom.spacing', {})
+    .set('settings.custom.typography.font-size', {})
+    .set('settings.custom.typography.line-height', {})
+    .set('settings.spacing.padding', true)
+    .set('settings.spacing.units', ['px', '%', 'em', 'rem', 'vw', 'vh'])
+    .set('settings.typography.customFontSize', false)
+    .useTailwindColors()
+    .useTailwindFontFamily()
+    .useTailwindFontSize()
+    .enable();
 };

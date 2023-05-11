@@ -1,8 +1,0 @@
-/*!
- * StickyNav v1.1.0
- * Make the navbar sticky when scrolling the page
- * https://github.com/michu2k/StickyNav
- *
- * Copyright 2019 Michał Strumpf
- * Published under MIT License
- */

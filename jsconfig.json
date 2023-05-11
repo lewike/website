@@ -1,14 +1,30 @@
 {
+  "extends": "@roots/sage/config/jsconfig.json",
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "jsx": "preserve",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "baseUrl": "resources",
+    /**
+     * Resolve aliases
+     */
     "paths": {
-      "@scripts/*": ["./resources/scripts/*"],
-      "@styles/*": ["./resources/styles/*"]
-    }
+      "@fonts/*": ["fonts/*"],
+      "@images/*": ["images/*"],
+      "@scripts/*": ["scripts/*"],
+      "@styles/*": ["styles/*"]
+    },
+    /**
+     * Type definitions
+     */
+    "types": [
+      "@roots/bud",
+      "@roots/bud-react",
+      "@roots/bud-postcss",
+      "@roots/bud-preset-recommend",
+      "@roots/bud-preset-wordpress",
+      "@roots/bud-tailwindcss",
+      "@roots/bud-wordpress-theme-json",
+      "@roots/sage"
+    ]
   },
-  "exclude": ["./public", "./node_modules"]
+  "include": ["bud.config.js", "resources"],
+  "exclude": ["node_modules", "public"]
 }

@@ -1,7 +1,7 @@
 import {domReady} from '@roots/sage/client';
 import StickyNav from 'stickynav-js';
 import axios from 'axios';
-import goTop from './scroll';
+import goTop from './scroll.js';
 import hljs from 'highlight.js/lib/core';
 import javascript from 'highlight.js/lib/languages/javascript';
 

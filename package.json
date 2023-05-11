@@ -2,38 +2,31 @@
   "name": "sage",
   "private": true,
   "browserslist": [
-    "extends @wordpress/browserslist-config"
+    "extends @roots/browserslist-config"
   ],
   "engines": {
     "node": ">=16.0.0"
   },
+  "type": "module",
   "scripts": {
     "dev": "bud dev",
     "build": "bud build",
-    "lint": "npm run lint:js && npm run lint:css",
-    "lint:js": "eslint resources/scripts",
-    "lint:css": "stylelint \"resources/**/*.{css,scss,vue}\"",
-    "test": "npm run lint",
-    "translate": "npm run translate:pot && npm run translate:js",
-    "translate:pot": "wp i18n make-pot . ./resources/lang/sage.pot --ignore-domain --include=\"app,resources\"",
-    "translate:js": "wp i18n make-json ./resources/lang --pretty-print"
+    "translate": "yarn translate:pot && yarn translate:update",
+    "translate:pot": "wp i18n make-pot . ./resources/lang/sage.pot --include=\"app,resources\"",
+    "translate:update": "wp i18n update-po ./resources/lang/sage.pot ./resources/lang/*.po",
+    "translate:compile": "yarn translate:mo && yarn translate:js",
+    "translate:js": "wp i18n make-json ./resources/lang --pretty-print",
+    "translate:mo": "wp i18n make-mo ./resources/lang ./resources/lang"
   },
   "devDependencies": {
-    "@roots/bud": "^5.7.7",
-    "@roots/bud-eslint": "5.7.7",
-    "@roots/bud-postcss": "^5.5.0",
-    "@roots/bud-prettier": "5.7.7",
-    "@roots/bud-sass": "^5.5.0",
-    "@roots/bud-stylelint": "5.7.7",
-    "@roots/bud-tailwindcss": "5.7.7",
-    "@roots/eslint-config": "5.7.7",
-    "@roots/sage": "5.7.7",
-    "@tailwindcss/forms": "^0.5.0",
-    "axios": "0.26.1",
-    "highlight.js": "^11.5.0",
-    "stickynav-js": "^1.1.0",
-    "vanilla-back-to-top": "^7.2.1",
-    "wow.js": "^1.2.2"
+    "@roots/bud": "6.12.2",
+    "@roots/bud-tailwindcss": "6.12.2",
+    "@roots/sage": "6.12.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "axios": "^1.4.0",
+    "highlight.js": "^11.8.0",
+    "stickynav-js": "^1.1.0",
+    "wow.js": "^1.2.2"
+  }
 }
