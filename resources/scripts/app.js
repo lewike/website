@@ -4,10 +4,10 @@ import axios from 'axios';
 import goTop from './scroll.js';
 import hljs from 'highlight.js/lib/core';
 import javascript from 'highlight.js/lib/languages/javascript';
+import WoW from 'wow.js';
 
 hljs.registerLanguage('javascript', javascript);
 hljs.highlightAll();
-const WoW = require('wow.js');
 
 /**
  * app.main
