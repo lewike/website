@@ -700,3 +700,18 @@ header {
 .post-categories {
   @apply flex gap-1;
 }
+
+.pagination {
+  @apply mt-6;
+}
+
+.nav-links {
+  @apply text-center flex justify-center gap-2;
+
+  .page-numbers {
+    @apply border border-blue-300 shadow rounded-sm bg-blue-50 px-2 py-0.5 text-blue-500;  
+  }
+  .current {
+    @apply border-blue-200 bg-white shadow-sm text-blue-400;
+  }
+}
