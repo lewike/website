@@ -178,13 +178,15 @@ header {
 
 .table-simple {
   @apply leading-9;
-
+  thead {
+    @apply border-gray-200;
+  }
   th {
-    @apply border-b-2 py-4 text-xl;
+    @apply border-b-2 py-4 text-xl border-gray-200;
   }
 
   td {
-    @apply border-b py-8 px-2;
+    @apply border-b py-8 px-2 border-gray-200;
 
     &:first-child {
       text-align: center;
