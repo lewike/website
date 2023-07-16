@@ -13,13 +13,13 @@
   </div>
   <div class="container mx-auto text-3xl pt-8 pb-20">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 justify-evenly text-center px-8 md:px-0">
-      <div class="hover-up-5 shadow px-10 py-16 rounded-md bg-neutral-50">
+      <div class="hover-up-5 shadow px-10 py-16 rounded-md bg-neutral-50 tracking-wider">
         10+年开发经验
       </div>
-      <div class="hover-up-5 shadow px-10 py-16 rounded-md bg-neutral-50">
+      <div class="hover-up-5 shadow px-10 py-16 rounded-md bg-neutral-50 tracking-wider">
         100+客户支持
       </div>
-      <div class="hover-up-5 shadow px-10 py-16 rounded-md bg-neutral-50">
+      <div class="hover-up-5 shadow px-10 py-16 rounded-md bg-neutral-50 tracking-wider">
         3000+作品销量
       </div>
     </div>

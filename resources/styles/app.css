@@ -5,7 +5,7 @@
 @import './content.css';
 
 @font-face {
-  src: url('../fonts/Lato-Regular.ttf');
+  src: url('../fonts/Exo2-Regular.ttf');
   font-display: swap;
   font-family: numFont;
 }
@@ -21,7 +21,7 @@
 header {
   width: 100%;
   position: relative;
-  background-color: transparent;
+  background-color: rgb(255, 255, 255, 0);
 
   .sticky-bar {
     padding-bottom: 0.75rem;
