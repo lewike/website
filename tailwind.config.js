@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} config */
+import typography from "@tailwindcss/typography"
+
 const config = {
   content: ['./index.php', './app/**/*.php', './resources/**/*.{php,vue,js}'],
   theme: {
@@ -23,6 +25,7 @@ const config = {
     },
   },
   plugins: [
+    typography
   ],
 };
 

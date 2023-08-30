@@ -26,7 +26,7 @@
         </div>
       </div>  
     </div>
-    <div class="entry-content mt-3 px-6 leading-6">
+    <div class="entry-content mt-3 px-6 leading-6 prose max-w-none">
       @php the_content() @endphp
     </div>
     <div class="px-6">

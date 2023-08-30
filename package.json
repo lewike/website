@@ -21,10 +21,11 @@
   "devDependencies": {
     "@roots/bud": "6.12.2",
     "@roots/bud-tailwindcss": "6.12.2",
-    "@roots/sage": "6.12.2"
+    "@roots/sage": "6.12.2",
+    "@tailwindcss/typography": "^0.5.9"
   },
   "dependencies": {
-    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/forms": "^0.5.6",
     "axios": "^1.4.0",
     "highlight.js": "^11.8.0",
     "stickynav-js": "^1.1.0",
