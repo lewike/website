@@ -704,7 +704,7 @@ header {
 }
 
 .pagination {
-  @apply mt-6;
+  @apply my-6;
 }
 
 .nav-links {
@@ -715,5 +715,16 @@ header {
   }
   .current {
     @apply border-blue-200 bg-white shadow-sm text-blue-400;
+  }
+}
+
+.wp-block-search__button svg {
+  fill: black;
+}
+.wp-block-search__button {
+  border-width: 1px;
+  @apply bg-gray-100;
+  &:hover {
+    @apply bg-gray-200;
   }
 }
